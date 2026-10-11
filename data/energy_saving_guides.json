@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Check heating and cooling before assuming why usage changed",
+    "topic": "heating cooling HVAC thermostat filters ducts seasonal usage",
+    "content": "Heating and cooling are major home energy uses. To investigate a change, check thermostat settings and schedules, whether a portable space heater or air conditioner was used more, whether heating or cooling equipment ran longer, and whether filters need cleaning or replacement. DOE recommends regular equipment maintenance. Duct leaks or poor insulation can also waste energy; DOE recommends having duct changes and repairs handled and tested by a qualified professional. Monthly kWh totals alone cannot identify which appliance caused a change.",
+    "source_name": "U.S. Department of Energy Energy Saver",
+    "source_url": "https://www.energy.gov/energysaver/why-energy-efficiency-matters"
+  },
+  {
+    "title": "Thermostat schedules and seasonal settings",
+    "topic": "thermostat heating cooling schedule heat pump winter summer",
+    "content": "DOE's Energy Saver guide says thermostat setbacks can reduce heating and cooling costs. It describes setting the thermostat back 7 to 10 degrees Fahrenheit for 8 hours a day in fall and winter, and turning it up in spring and summer. The guide cautions heat pump owners not to use this setback approach unless they have a smart or programmable thermostat designed for heat pumps. Actual savings vary by home and equipment.",
+    "source_name": "U.S. Department of Energy Energy Saver Guide",
+    "source_url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf"
+  },
+  {
+    "title": "Look for drafts and air leaks",
+    "topic": "drafts air leaks weatherstripping caulk insulation windows doors",
+    "content": "Air leaks around windows, doors, and other openings can make a home less comfortable and increase heating or cooling demand. DOE recommends considering caulk for stationary cracks and weatherstripping for movable joints such as doors and windows. Some sealing work, especially around heating and cooling ducts, is best assessed or completed by a qualified professional.",
+    "source_name": "U.S. Department of Energy Energy Saver",
+    "source_url": "https://www.energy.gov/energysaver/why-energy-efficiency-matters"
+  },
+  {
+    "title": "Use efficient lighting where lights are used most",
+    "topic": "lighting LED light bulbs electricity use",
+    "content": "DOE recommends installing energy-efficient lighting in the fixtures used most often. Replacing incandescent bulbs with LED bulbs can be a practical step; check bulb brightness, base, and whether it is suitable for the fixture or dimmer. The best savings depend on the bulb being replaced and how long the light is used.",
+    "source_name": "U.S. Department of Energy Energy Saver",
+    "source_url": "https://www.energy.gov/save/renters"
+  },
+  {
+    "title": "Review monthly bills and inspect common energy uses",
+    "topic": "monthly bills checklist appliances water heating heating cooling",
+    "content": "DOE's Home Energy Checklist recommends collecting utility bills monthly, separating electricity and fuel bills, and targeting large energy consumers. It also recommends checking heating and cooling systems and cleaning or replacing furnace, air-conditioner, and heat-pump filters. A bill comparison can show when usage changed, but a home inspection or more details are needed to identify the cause.",
+    "source_name": "U.S. Department of Energy Federal Energy Management Program",
+    "source_url": "https://www.energy.gov/cmei/femp/home-energy-checklist"
+  }
+]
