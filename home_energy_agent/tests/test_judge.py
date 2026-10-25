@@ -15,13 +15,11 @@ async def test_zero_baseline_bill_comparison_is_accurate(agent):
     await assert_criteria(
         result,
         [
-            "The agent calls compare_monthly_bills with January as the previous "
-            "period (0 kWh, $0, 30 days) and February as the current period "
-            "(100 kWh, $20, 30 days).",
-            "The answer clearly reports the increase of 100 kWh and $20, and "
-            "does not state a percentage increase because the January baseline "
-            "is zero.",
-            "The answer treats the comparison as a change in the bills and does "
-            "not claim to know what caused the increase.",
+            "Calls compare_monthly_bills with the supplied bill data; does not "
+            "call search_energy_guidance.",
+            "Reports January-to-February increases of 100 kWh and $20.",
+            "Reports daily averages: January 0 kWh/$0; February about "
+            "3.33 kWh/$0.67.",
+            "Does not calculate a percentage increase from the zero baseline.",
         ],
     )
