@@ -1,4 +1,5 @@
 .env
+data/session_costs.jsonl
 .venv/
 __pycache__/
 *.pyc

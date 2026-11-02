@@ -1,8 +1,33 @@
 """The two small tools used by the Home Energy Helper agent."""
 
+from contextlib import contextmanager
+from contextvars import ContextVar
+from typing import Iterator
+
+import logfire
 from pydantic import BaseModel, Field
 
 from home_energy_agent.rag import search
+
+
+_active_tool_calls = ContextVar("active_home_energy_tool_calls", default=None)
+
+
+@contextmanager
+def capture_tool_calls() -> Iterator[list[str]]:
+    """Collect tool names called during one interaction."""
+    tool_calls: list[str] = []
+    token = _active_tool_calls.set(tool_calls)
+    try:
+        yield tool_calls
+    finally:
+        _active_tool_calls.reset(token)
+
+
+def _record_tool_call(tool_name: str) -> None:
+    tool_calls = _active_tool_calls.get()
+    if tool_calls is not None:
+        tool_calls.append(tool_name)
 
 
 class BillPeriod(BaseModel):
@@ -26,8 +51,11 @@ class HomeEnergyTools:
 
     def search_energy_guidance(self, question: str) -> list[dict]:
         """Search Energy.gov chunks and return excerpts with citation metadata."""
+        _record_tool_call("search_energy_guidance")
+        logfire.info("Tool call: search_energy_guidance", question=question)
         print(f"TOOL CALL: search_energy_guidance({question!r})")
         results = search(question, self.index)
+        logfire.info("Tool result: search_energy_guidance", result_count=len(results))
         print(f"TOOL RESULT: search_energy_guidance returned {len(results)} records")
         return [
             {
@@ -46,6 +74,7 @@ class HomeEnergyTools:
         current_period: BillPeriod,
     ) -> dict:
         """Compare two bills and report changes without claiming their cause."""
+        _record_tool_call("compare_monthly_bills")
         previous = previous_period.model_dump()
         current = current_period.model_dump()
         print(
