@@ -19,7 +19,7 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_PATH = ROOT / "data" / "energygov_cache.json"
 CACHE_MAX_AGE = timedelta(days=7)
-CACHE_VERSION = 2
+CACHE_VERSION = 3
 
 ENERGY_GOV_SOURCES = [
     {
@@ -46,6 +46,15 @@ ENERGY_GOV_SOURCES = [
         "title": "Consumer Guide to Air Sealing the Home",
         "topic": "weatherization, air leaks, drafts, caulking, weatherstripping",
         "url": "https://www.energy.gov/sites/default/files/2021-08/ES-Air%20Sealing_080421.pdf",
+    },
+    {
+        "title": "Energy Saver Guide: Tips on Saving Money and Energy in Your Home",
+        "topic": (
+            "home energy savings, heating, cooling, heat pumps, thermostats, "
+            "appliances, lighting, weatherization, insulation, air sealing, renters, "
+            "energy audits"
+        ),
+        "url": "https://www.energy.gov/sites/default/files/2022-08/energy-saver-guide-2022.pdf",
     },
 ]
 
